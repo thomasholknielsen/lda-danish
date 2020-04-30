@@ -1,0 +1,76 @@
+﻿
+MAPPINGS
+"ret"
+"berettiget"
+
+
+
+
+*gymnasi* 
+
+
+FLER ORD
+
+
+info --> information
+
+cv CV
+
+
+
+
+
+
+RENSE sætninger
+virusfri
+virus-free
+virusfri
+x-virus-status: scanned by virussmart (s)
+x-virus-status: scanned by virussmart (c)
+denne e-mail blev kontrolleret for virusser af avast antivirussoftware
+virus-free
+com/antivirus
+com/antivirus
+libre de virus
+
+ 
+
+ start på videresendt besked:
+---------- videresendte meddelelser ----------
+vil du vide mere, kan du læse vores persondatapolitik, cookiepolitik
+
+
+
+
+jeg ser frem til at høre fra jer
+ser frem til at høre fra jer
+jeg ser frem til at høre fra dig
+jeg ser frem til jeres svar
+jeg ser frem til at høre fra jer!
+
+
+
+
+
+
+Jeg er ikke længere ledig, derfor deltager jeg ikke i velkomstmøde mandag d. 22. maj i Odense
+ 
+
+Du får denne e-mail som kvittering, fordi du har afmeldt dig jobcentret digitalt.
+ 
+ Cpr. nr.: 240164-XXXX
+ 
+ Din afmelding er nu registreret hos jobcentret.
+ 
+ Du afmeldes fordi du har fået arbejde på fuld tid i mindst 14 dage.
+ Du afmeldes fra 17-05-2017.
+
+ 
+ 
+ */
+
+
+
+
+
+

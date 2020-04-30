@@ -1,0 +1,9 @@
+:: go to the folder with the scripts
+cd E:\Dev\lda_aka
+
+:: activate the environment with the correct packages
+activate lda
+
+:: start running the model with the current pipeline
+:: to change the pipeline make changes to the dict pipe in train_pipeline.py
+C:/ProgramData/Anaconda3/envs/lda/python.exe e:/Dev/lda_aka/multi_lda.py

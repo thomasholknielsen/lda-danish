@@ -1,0 +1,1603 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/21/2020 11:46:56 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="THN-P53"
+  DTS:CreatorName="LIPHT\thn"
+  DTS:DTSID="{E6D793B1-AFE3-4447-80C7-20623C54B4FC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.68"
+  DTS:LocaleID="8192"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{5A3AD378-CFA1-4422-A8D4-4F3DE6306CD4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Dim_Content.csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0566C8DF-78BD-4641-82B0-13CA126DEB19}"
+      DTS:ObjectName="Dim_Content.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\thn\Documents\GitHub\lda-danish\SSIS\Dim_Content.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentID"
+              DTS:DTSID="{323FA462-780A-4C62-9D98-0E090A14CB6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentUrl"
+              DTS:DTSID="{60CD0FE3-A79E-420A-9104-DAD2E83DC6F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentType"
+              DTS:DTSID="{A4118EBF-CEE3-42AB-A743-F1B3B155FE69}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PublishDate"
+              DTS:DTSID="{C6E0B8F5-9DF2-4955-A68C-009ACE110F95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentTagsKicker"
+              DTS:DTSID="{7542F08E-2BCE-46F3-8BF6-765A7D6C2850}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentTagsContent"
+              DTS:DTSID="{83521C02-442F-4A8D-B2E7-3B777ABBE2C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentTagsMultiple"
+              DTS:DTSID="{7743172D-BF41-489D-878B-733369AB7F59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentTitle"
+              DTS:DTSID="{736AA565-24C6-4591-A2F8-6528A8961BD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentDesriptionHeader"
+              DTS:DTSID="{DF6E8470-143E-4538-BE96-319EDE39CAF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentDesriptionManchet"
+              DTS:DTSID="{BB43E32B-681E-428C-90EC-33AD00F1A9D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContentDesriptionText"
+              DTS:DTSID="{687A5017-F5B5-4B65-887C-11D04E3616F5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9ECFC393-0013-466B-A2D5-23907BED0A3E}"
+      DTS:ObjectName="LocalHost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GRE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\import from csv"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7F8BBDC9-A0BF-4458-9D46-D8FA5D8E1885}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="import from csv"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\import from csv\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentID]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentID"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentID]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentUrl]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentUrl"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentUrl]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentType]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentType"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentType]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[PublishDate]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PublishDate"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[PublishDate]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentTagsKicker]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentTagsKicker"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsKicker]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentTagsContent]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentTagsContent"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsContent]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentTagsMultiple]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentTagsMultiple"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsMultiple]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentTitle]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentTitle"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTitle]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentDesriptionHeader]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentDesriptionHeader"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionHeader]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentDesriptionManchet]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ContentDesriptionManchet"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionManchet]" />
+                    <inputColumn
+                      refId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input].Columns[ContentDesriptionText]"
+                      cachedCodepage="65001"
+                      cachedDataType="text"
+                      cachedName="ContentDesriptionText"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionText]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentID]"
+                      name="Copy of ContentID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentUrl]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentUrl]"
+                      name="Copy of ContentUrl"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentUrl]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentType]"
+                      name="Copy of ContentType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentType]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PublishDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PublishDate]"
+                      name="Copy of PublishDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[PublishDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsKicker]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsKicker]"
+                      name="Copy of ContentTagsKicker"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsKicker]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsContent]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsContent]"
+                      name="Copy of ContentTagsContent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsContent]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsMultiple]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsMultiple]"
+                      name="Copy of ContentTagsMultiple"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsMultiple]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTitle]"
+                      name="Copy of ContentTitle"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTitle]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionHeader]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionHeader]"
+                      name="Copy of ContentDesriptionHeader"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionHeader]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionManchet]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="500"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionManchet]"
+                      name="Copy of ContentDesriptionManchet"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionManchet]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionText]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionText]"
+                      name="Copy of ContentDesriptionText"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionText]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\import from csv\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\import from csv\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="8192"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\import from csv\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Dim_Content.csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[Dim_Content.csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentID]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentID]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentID]"
+                      name="ContentID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentUrl]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentUrl]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentUrl]"
+                      name="ContentUrl"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentType]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentType]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentType]"
+                      name="ContentType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[PublishDate]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PublishDate]"
+                      length="50"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[PublishDate]"
+                      name="PublishDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsKicker]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentTagsKicker]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsKicker]"
+                      name="ContentTagsKicker"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsContent]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentTagsContent]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsContent]"
+                      name="ContentTagsContent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsMultiple]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentTagsMultiple]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTagsMultiple]"
+                      name="ContentTagsMultiple"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTitle]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentTitle]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentTitle]"
+                      name="ContentTitle"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionHeader]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentDesriptionHeader]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionHeader]"
+                      name="ContentDesriptionHeader"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionManchet]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentDesriptionManchet]"
+                      length="500"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionManchet]"
+                      name="ContentDesriptionManchet"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionText]"
+                      codePage="65001"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentDesriptionText]"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].Columns[ContentDesriptionText]"
+                      name="ContentDesriptionText"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentID]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentID" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentUrl]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentUrl" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentType]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentType" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PublishDate]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="PublishDate" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentTagsKicker]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentTagsKicker" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentTagsContent]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentTagsContent" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentTagsMultiple]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentTagsMultiple" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentTitle]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentTitle" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentDesriptionHeader]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentDesriptionHeader" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentDesriptionManchet]"
+                      codePage="65001"
+                      dataType="str"
+                      length="500"
+                      name="ContentDesriptionManchet" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ContentDesriptionText]"
+                      codePage="65001"
+                      dataType="text"
+                      name="ContentDesriptionText" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\import from csv\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\import from csv\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\import from csv\SQL Server Destination"
+              componentClassID="Microsoft.SQLServerDestination"
+              contactInfo="SQL Server Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+              description="SQL Server Destination"
+              name="SQL Server Destination"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the database object to copy data into."
+                  expressionType="Notify"
+                  name="BulkInsertTableName">[dbo].[Dim_Content]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
+                  name="BulkInsertCheckConstraints">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the first row to copy. Corresponds to the bulk insert FIRSTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertFirstRow">-1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any insert triggers defined on the destination object will execute during the data copy. Corresponds to the bulk insert FIRE_TRIGGERS option."
+                  name="BulkInsertFireTriggers">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Corresponds to the bulk insert KEEPIDENTITY option."
+                  name="BulkInsertKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null copied to the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="BulkInsertKeepNulls">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the last row to copy. Corresponds to the bulk insert LASTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertLastRow">-1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of syntax errors and compilation errors that can occur before the data copy operation is canceled. Each row that cannot be copied is ignored and counted as one error. Corresponds to the bulk insert MAXERRORS option."
+                  name="BulkInsertMaxErrors">-1</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies how the data to be copied is sorted. Corresponds to the bulk insert ORDER option."
+                  expressionType="Notify"
+                  name="BulkInsertOrder"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that a table-level lock is acquired for the duration of the data copy operation. Corresponds to the bulk insert TABLOCK option."
+                  name="BulkInsertTablock">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
+                  expressionType="Notify"
+                  name="Timeout">30</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
+                  name="MaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\import from csv\SQL Server Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input]"
+                  hasSideEffects="true"
+                  name="SQL Server Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentID]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentID"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentID]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentID]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentUrl]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentUrl"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentUrl]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentUrl]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentType]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentType"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentType]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentType]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[PublishDate]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PublishDate"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[PublishDate]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[PublishDate]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentTagsKicker]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentTagsKicker"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentTagsKicker]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsKicker]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentTagsContent]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentTagsContent"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentTagsContent]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsContent]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentTagsMultiple]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentTagsMultiple"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentTagsMultiple]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsMultiple]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentTitle"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentTitle]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTitle]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentDesriptionHeader]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentDesriptionHeader"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentDesriptionHeader]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionHeader]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentDesriptionManchet]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ContentDesriptionManchet"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentDesriptionManchet]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionManchet]" />
+                    <inputColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].Columns[ContentDesriptionText]"
+                      cachedDataType="nText"
+                      cachedName="ContentDesriptionText"
+                      externalMetadataColumnId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentDesriptionText]"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionText]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentID]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentID" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentUrl]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentUrl" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentType]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentType" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[PublishDate]"
+                      dataType="wstr"
+                      length="50"
+                      name="PublishDate" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentTagsKicker]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentTagsKicker" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentTagsContent]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentTagsContent" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentTagsMultiple]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentTagsMultiple" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentTitle]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentTitle" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentDesriptionHeader]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentDesriptionHeader" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentDesriptionManchet]"
+                      dataType="wstr"
+                      length="500"
+                      name="ContentDesriptionManchet" />
+                    <externalMetadataColumn
+                      refId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input].ExternalColumns[ContentDesriptionText]"
+                      dataType="nText"
+                      name="ContentDesriptionText" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\import from csv\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\import from csv\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentUrl]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentUrl"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentUrl]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentUrl]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentType]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentType"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentType]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentType]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of PublishDate]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of PublishDate"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PublishDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[PublishDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentTagsKicker]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentTagsKicker"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsKicker]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsKicker]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentTagsContent]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentTagsContent"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsContent]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsContent]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentTagsMultiple]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentTagsMultiple"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTagsMultiple]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsMultiple]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentTitle"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentTitle]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTitle]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentDesriptionHeader]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentDesriptionHeader"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionHeader]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionHeader]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentDesriptionManchet]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentDesriptionManchet"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionManchet]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionManchet]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentDesriptionText]"
+                      cachedDataType="nText"
+                      cachedName="Copy of ContentDesriptionText"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentDesriptionText]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionText]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\import from csv\Union All.Inputs[Union All Input 1].Columns[Copy of ContentID]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Copy of ContentID"
+                      lineageId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ContentID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentID]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\import from csv\Union All.Inputs[Union All Input 2]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\import from csv\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentUrl]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentUrl]"
+                      name="ContentUrl" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentType]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentType]"
+                      name="ContentType" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[PublishDate]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[PublishDate]"
+                      name="PublishDate" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsKicker]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsKicker]"
+                      name="ContentTagsKicker" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsContent]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsContent]"
+                      name="ContentTagsContent" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsMultiple]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTagsMultiple]"
+                      name="ContentTagsMultiple" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTitle]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentTitle]"
+                      name="ContentTitle" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionHeader]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionHeader]"
+                      name="ContentDesriptionHeader" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionManchet]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionManchet]"
+                      name="ContentDesriptionManchet" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionText]"
+                      dataType="nText"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentDesriptionText]"
+                      name="ContentDesriptionText" />
+                    <outputColumn
+                      refId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentID]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\import from csv\Union All.Outputs[Union All Output 1].Columns[ContentID]"
+                      name="ContentID" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\import from csv.Paths[Data Conversion Output]"
+              endId="Package\import from csv\Union All.Inputs[Union All Input 1]"
+              name="Data Conversion Output"
+              startId="Package\import from csv\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\import from csv.Paths[Flat File Source Output]"
+              endId="Package\import from csv\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\import from csv\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\import from csv.Paths[Union All Output 1]"
+              endId="Package\import from csv\SQL Server Destination.Inputs[SQL Server Destination Input]"
+              name="Union All Output 1"
+              startId="Package\import from csv\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Trunc table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D671846A-FA46-4647-B5AA-8B2A76296A3A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Trunc table"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{9ECFC393-0013-466B-A2D5-23907BED0A3E}"
+          SQLTask:SqlStatementSource="truncate table dbo.Dim_Content" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{8D8C97B5-0BDF-4340-9FB5-50CDA63BE65C}"
+      DTS:From="Package\Trunc table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\import from csv" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153,42"
+          Id="Package\import from csv"
+          TopLeft="401,347" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Trunc table"
+          TopLeft="397,190" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="463,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.5,115"
+              Start="0,0"
+              End="14.5,107.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.5"
+                    Point2="0,57.5"
+                    Point3="4,57.5" />
+                  <mssgle:LineSegment
+                    End="10.5,57.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,57.5"
+                    Point2="14.5,57.5"
+                    Point3="14.5,61.5" />
+                  <mssgle:LineSegment
+                    End="14.5,107.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\import from csv">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="188,42"
+          Id="Package\import from csv\SQL Server Destination"
+          TopLeft="289,818" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\import from csv\Flat File Source"
+          TopLeft="398,218" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\import from csv\Data Conversion"
+          TopLeft="476,358" />
+        <EdgeLayout
+          Id="Package\import from csv.Paths[Flat File Source Output]"
+          TopLeft="473.5,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80.5,98"
+              Start="0,0"
+              End="80.5,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45"
+                    Point2="0,49"
+                    Point3="4,49" />
+                  <mssgle:LineSegment
+                    End="76.5,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.5,49"
+                    Point2="80.5,49"
+                    Point3="80.5,53" />
+                  <mssgle:LineSegment
+                    End="80.5,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\import from csv\Union All"
+          TopLeft="447,472" />
+        <EdgeLayout
+          Id="Package\import from csv.Paths[Data Conversion Output]"
+          TopLeft="554,400">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-46.5,72"
+              Start="0,0"
+              End="-46.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="-4,36" />
+                  <mssgle:LineSegment
+                    End="-42.5,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42.5,36"
+                    Point2="-46.5,36"
+                    Point3="-46.5,40" />
+                  <mssgle:LineSegment
+                    End="-46.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\import from csv.Paths[Union All Output 1]"
+          TopLeft="507.5,514">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-124.5,304"
+              Start="0,0"
+              End="-124.5,296.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,148" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,148"
+                    Point2="0,152"
+                    Point3="-4,152" />
+                  <mssgle:LineSegment
+                    End="-120.5,152" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-120.5,152"
+                    Point2="-124.5,152"
+                    Point3="-124.5,156" />
+                  <mssgle:LineSegment
+                    End="-124.5,296.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\import from csv\SQL Server Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
